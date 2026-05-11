@@ -5,6 +5,7 @@ public class PartTimeEmployee extends Employee{
     private
 
     public PartTimeEmployee{
-        
+
     }
 }
+//PART TIME

@@ -14,6 +14,12 @@ public class Employee{
     }   public void setName(String name){
         this.name=name;
     }   public void setBaseSalary(double baseSalary){
-        this.baseSalary=baseSalary;
+        if(baseSalary <= 0){
+            this.baseSalary=0;
+        }else{
+            this.baseSalary=baseSalary;
+        }
+    }   public double computeSalary(){
+        return baseSalary;
     }
 }

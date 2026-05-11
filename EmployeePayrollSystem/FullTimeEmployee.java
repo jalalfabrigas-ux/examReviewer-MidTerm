@@ -9,4 +9,6 @@ public class FullTimeEmployee extends Employee{
         this.overtimeHours=overtimeHours;
         this.performance=performance;
     }
+    @Override
 }
+//FULLTIME
