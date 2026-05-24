@@ -15,10 +15,18 @@ public class Main{
 
             System.out.print("\n 1. FOOD | 2. DRINK");
             int type = sc.nextInt();
+            System.out.print("\n Name of Product? ");
+            int name = sc.nextLine();
+            System.out.print("\n Price of Product? ");
+            double price = sc.nextDouble();
             
+            sc.nextLine();
 
             if(type == 1){
-                System.out.print("\n");
+                System.out.print("\n==FOOD MENU==");
+                System.out.print("\nQuantity of Order? ");
+                int quantity=sc.nextInt();
+                
             }
             else if(type == 2){
                 System.out.print("\n");
