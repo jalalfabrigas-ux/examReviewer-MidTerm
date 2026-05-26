@@ -16,7 +16,7 @@ public class Main{
             System.out.print("\n 1. FOOD | 2. DRINK");
             int type = sc.nextInt();
             System.out.print("\n Name of Product? ");
-            int name = sc.nextLine();
+            String name = sc.nextLine();
             System.out.print("\n Price of Product? ");
             double price = sc.nextDouble();
             
@@ -26,16 +26,26 @@ public class Main{
                 System.out.print("\n==FOOD MENU==");
                 System.out.print("\nQuantity of Order? ");
                 int quantity=sc.nextInt();
+
+                order[i] = new FoodItem(name,price,quantity);
                 
             }
             else if(type == 2){
-                System.out.print("\n");
+                System.out.print("\n==DRINK MENU==");
+                System.out.print("\nSize of Drink? ");
+                int size=sc.nextInt();
+
+                order[i] = new DrinkItem(name,price,size);
             }
             else{
-                System.out.print("\nInvalid Input!")
+                System.out.print("\nInvalid Input!");
             }
-
+        }
+        for(MenuItem haha : order){
+            System.out.println("===RECIEPT===");
+            System.out.println("Order Name:" haha.getName());
             
+
         }
     }
 }
