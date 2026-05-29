@@ -1,51 +1,75 @@
 package OnlineOrderSystem;
 import java.util.*;
 
-public class Main{
-    public static  void main(String args[]){
-        Scanner sc = new Scanner (System.in);
+public class Main {
 
-        System.out.println("==WELCOME TO ONLINE ORDER SYSTEM");
-        System.out.print("\n ENTER HOW MANY ORDERS: ");
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("=== WELCOME TO ONLINE ORDER SYSTEM ===");
+
+        System.out.print("\nEnter How Many Orders: ");
         int n = sc.nextInt();
-        FoodItem[] order = new FoodItem[n];
-        for(int i=0;i<n;i++){
-        
-            System.out.print("\nWHAT WOULD YOU LIKE TO ORDER? ^_^");
 
-            System.out.print("\n 1. FOOD | 2. DRINK");
+        MenuItem[] order = new MenuItem[n];
+
+        for (int i = 0; i < n; i++) {
+
+            System.out.println("\nWHAT WOULD YOU LIKE TO ORDER?");
+            System.out.println("1. FOOD");
+            System.out.println("2. DRINK");
+
+            System.out.print("Enter Choice: ");
             int type = sc.nextInt();
-            System.out.print("\n Name of Product? ");
-            String name = sc.nextLine();
-            System.out.print("\n Price of Product? ");
-            double price = sc.nextDouble();
-            
             sc.nextLine();
 
-            if(type == 1){
-                System.out.print("\n==FOOD MENU==");
-                System.out.print("\nQuantity of Order? ");
-                int quantity=sc.nextInt();
+            System.out.print("Name of Product: ");
+            String name = sc.nextLine();
 
-                order[i] = new FoodItem(name,price,quantity);
-                
-            }
-            else if(type == 2){
-                System.out.print("\n==DRINK MENU==");
-                System.out.print("\nSize of Drink? ");
-                int size=sc.nextInt();
+            System.out.print("Price of Product: ");
+            double price = sc.nextDouble();
 
-                order[i] = new DrinkItem(name,price,size);
-            }
-            else{
-                System.out.print("\nInvalid Input!");
+            if (type == 1) {
+
+                System.out.print("Quantity of Order: ");
+                int quantity = sc.nextInt();
+
+                order[i] = new FoodItem(name, price, quantity);
+
+            } else if (type == 2) {
+
+                System.out.println("\nDrink Sizes:");
+                System.out.println("1. Small");
+                System.out.println("2. Medium");
+                System.out.println("3. Large");
+
+                System.out.print("Enter Size: ");
+                int size = sc.nextInt();
+
+                order[i] = new DrinkItem(name, price, size);
+
+            } else {
+
+                System.out.println("Invalid Input!");
             }
         }
-        for(MenuItem haha : order){
-            System.out.println("===RECIEPT===");
-            System.out.println("Order Name:" haha.getName());
-            
+        System.out.println("\n======= RECEIPT =======");
 
+        double grandTotal = 0;
+
+        for (MenuItem item : order) {
+
+            if (item != null) {
+
+                System.out.println("\nProduct Name: " + item.getName());
+                System.out.println("Base Price: " + item.getPrice());
+                System.out.println("Total Price: " + item.getTotalPrice());
+
+                grandTotal += item.getTotalPrice();
+            }
         }
+
+        System.out.println("\nGrand Total: " + grandTotal);
     }
 }
