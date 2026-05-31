@@ -18,6 +18,8 @@ public abstract class Person {
         this.age=age;
 
     }   public void displayInfo(){
+        System.out.print("NAME OF STUDENT: " + getName() );
+        System.out.print("AGE OF STUDENT: " + getAge() );
         
     }
     
