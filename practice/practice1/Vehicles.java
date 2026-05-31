@@ -13,6 +13,7 @@ public Vehicles(String vehicleName{
 
 
  public abstract double fare(){
+    //
 
  }   
 }
