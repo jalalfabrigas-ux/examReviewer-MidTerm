@@ -1,4 +1,4 @@
-package EmployeePayrollSystem;
+yeapackage EmployeePayrollSystem;
 
 public class FullTimeEmployee extends Employee{
     private int  overtimeHours;
