@@ -12,12 +12,12 @@ public class Course {
         this.yearLevel=yearLevel;
 
     }   public String getCourseCode(){
-    return Coursecode;
+        return Coursecode;
     }   public String getName(){
-    return name;
+        return name;
     }   public int getUnits(){
-    return units;
+        return units;
     }   public int yearLevel(){
-    return yearLevel;
+        return yearLevel;
     }
 }

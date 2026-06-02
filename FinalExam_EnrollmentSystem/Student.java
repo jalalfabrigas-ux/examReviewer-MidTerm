@@ -25,6 +25,10 @@ public abstract class Student {
         return gpa;
     }   public void setGPA(double gpa){
         this.gpa=gpa;
+    }   public int getYearLevel(){
+        return yearLevel;
+    }   public void setYearLevel(int yearLevel){
+        this.yearLevel=yearLevel;
     }
     
 }
