@@ -13,6 +13,18 @@ public abstract class Student {
         this.id=id;
         this.gpa=gpa;
         this.yearLevel=yearLevel;
-    }  public 
+    }  public String getName(){
+        return name;
+    }  public void setName(String name){
+        this.name=name;
+    }  public String getID(){
+        return id;
+    }  public void setID(String id){
+        this.id=id;
+    }   public double getGPA(){
+        return gpa;
+    }   public void setGPA(double gpa){
+        this.gpa=gpa;
+    }
     
 }
